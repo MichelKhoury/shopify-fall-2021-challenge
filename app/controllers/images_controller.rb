@@ -71,8 +71,6 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
 
-    debugger
-
     # fetch tags from google vision API
     helpers.fetch_tags(image_params)
 
